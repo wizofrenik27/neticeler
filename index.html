@@ -43,7 +43,7 @@ h1{font-size:34px;margin:18px 0 20px;color:var(--strong)}
 </main>
 <script>
 var data=[
- {name:"Математика",short:"Матем",score:"74.8",rows:[["Количество закрытых ответов",12],["Количество кодлашма",10],["Количество открытых ответов",3],["Количество неполных ответов",2]]},
+ {name:"Математика",short:"Матем",score:"74.8",rows:[["Количество закрытых ответов",12],["Количество открытых ответов",3],["Количество неполных ответов",2]]},
  {name:"Русский язык",short:"Русс",score:"77.5",rows:[["Количество закрытых ответов",17],["Количество открытых ответов",5],["Количество неполных ответов",4]]},
  {name:"Английский язык",short:"Англ",score:"68.3",rows:[["Количество правильных ответов",19],["Количество неправильных ответов",5],["Количество неполных ответов",1]]}
 ];
@@ -54,7 +54,7 @@ data.forEach(function(s){
  var rows=s.rows.map(function(r){return "<p>"+r[0]+": <b>"+r[1]+"</b></p>"}).join("");
  full.insertAdjacentHTML("beforeend",'<div class="pill">'+s.name+' (Максимум: 100)</div><div class="inner">'+rows+'<p>Результат: <b>'+s.score+'</b></p></div>');
 });
-document.getElementById("total").textContent=(sum/data.length).toFixed(1);
+document.getElementById("total").textContent=sum.toFixed(1);
 function route(){var d=location.hash==="#details";
  document.getElementById("home").classList.toggle("hide",d);
  document.getElementById("details").classList.toggle("hide",!d);window.scrollTo(0,0);}
